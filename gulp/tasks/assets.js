@@ -15,6 +15,7 @@ const size = require('gulp-size');
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 const when = require('gulp-if');
+const config = require('./config');
 
 // 'gulp scripts' -- creates a index.js file from your JavaScript files and
 // creates a Sourcemap for it
@@ -23,10 +24,7 @@ const when = require('gulp-if');
 gulp.task('scripts', () =>
   // NOTE: The order here is important since it's concatenated in order from
   // top to bottom, so you want vendor scripts etc on top
-  gulp.src([
-    'src/assets/javascript/vendor.js',
-    'src/assets/javascript/main.js'
-  ])
+  gulp.src(config.scriptFiles)
     .pipe(newer('.tmp/assets/javascript/index.js', {dest: '.tmp/assets/javascript', ext: '.js'}))
     .pipe(when(!argv.prod, sourcemaps.init()))
     .pipe(concat('index.js'))
@@ -54,10 +52,11 @@ gulp.task('scripts', () =>
 // 'gulp styles --prod' -- creates a CSS file from your SASS, adds prefixes and
 // then minwhenies, gzips and cache busts it. Does not create a Sourcemap
 gulp.task('styles', () =>
-  gulp.src('src/assets/scss/style.scss')
+  gulp.src('src/assets/sass/style.sass')
     .pipe(when(!argv.prod, sourcemaps.init()))
     .pipe(sass({
-      precision: 10
+      precision: 10,
+      includePaths : config.sassIncludes
     }).on('error', sass.logError))
     .pipe(postcss([
       autoprefixer({browsers: 'last 1 version'})
@@ -91,8 +90,7 @@ function reload(done) {
 // in all your files and update them when needed
 gulp.task('serve', (done) => {
   browserSync.init({
-    // tunnel: true,
-    // open: false,
+    open: false,
     server: ['.tmp', 'dist']
   });
   done();
@@ -101,6 +99,6 @@ gulp.task('serve', (done) => {
   gulp.watch(['src/**/*.md', 'src/**/*.html', 'src/**/*.yml'], gulp.series('build:site', reload));
   gulp.watch(['src/**/*.xml', 'src/**/*.txt'], gulp.series('site', reload));
   gulp.watch('src/assets/javascript/**/*.js', gulp.series('scripts', reload));
-  gulp.watch('src/assets/scss/**/*.scss', gulp.series('styles'));
+  gulp.watch('src/assets/sass/**/*', gulp.series('styles'));
   gulp.watch('src/assets/images/**/*', gulp.series('images', reload));
 });

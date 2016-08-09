@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="18px" height="24px" viewBox="0 0 18 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>cart-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Header-(Mobile)" transform="translate(-287.000000, -18.000000)" fill="#000000">
+            <g id="Header">
+                <g id="cart-icon" transform="translate(287.000000, 18.000000)">
+                    <path d="M13,6 L13,4 C13,1.791 11.209,0 9,0 C6.791,0 5,1.791 5,4 L5,6 L0,6 L0,24 L18,24 L18,6 L13,6 L13,6 Z M6,4 C6,2.346 7.346,1 9,1 C10.654,1 12,2.346 12,4 L12,6 L6,6 L6,4 L6,4 Z M16,22 L2,22 L2,8 L5,8 L5,9.5 C5,9.776 5.224,10 5.5,10 C5.776,10 6,9.776 6,9.5 L6,8 L12,8 L12,9.5 C12,9.776 12.224,10 12.5,10 C12.776,10 13,9.776 13,9.5 L13,8 L16,8 L16,22 L16,22 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
