@@ -4,8 +4,13 @@ The main SCSS file for everything, yep
 
 @import "vendor/normalize";
 
+// Importing bourbon and neat (using sassIncludes on the gulpfile for a clean import here)
 @import "bourbon";
 @import "neat";
 
 @import "base/base";
 @import "global";
+@import "layout/index";
+
+// Now here will go the modules
+@import "general/index";

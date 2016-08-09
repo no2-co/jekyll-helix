@@ -1,0 +1,18 @@
+.main-nav{
+  padding: 13px 0;
+  background: $white;
+
+  @include e(logo) {
+    margin: 0 auto;
+  }
+  @include e(burger) {
+    cursor: pointer;
+  }
+  @include e(cart) {
+    cursor: pointer;
+  }
+  .row--flex {
+    display: flex;
+    align-items: center;
+  }
+}
