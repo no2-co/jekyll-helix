@@ -18,14 +18,12 @@ gulp.task('site:tmp', () =>
 gulp.task('site', done => {
   if (!argv.prod) {
     shell.exec('jekyll build');
-    done();
   } else if (argv.prod) {
     shell.exec('jekyll build --config _config.yml,_config.build.yml');
-    done();
   } else if (argv.staging) {
     shell.exec('jekyll build --config _config.yml,_config.staging.yml');
-    done();
   }
+  done();
 });
 
 // 'gulp doctor' -- literally just runs jekyll doctor
