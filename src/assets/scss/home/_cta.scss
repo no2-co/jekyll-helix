@@ -1,0 +1,16 @@
+.home-cta {
+  padding: 30px;
+  background: $white;
+  text-align: center;
+  position: relative;
+  a {
+    display: block;
+    font-size: 18px;
+    color: $black;
+    line-height: (29/18);
+    em {
+      font-style: normal;
+      font-weight: bold;
+    }
+  }
+}
