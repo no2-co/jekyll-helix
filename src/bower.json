@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "bourbon": "^4.2.7",
-    "neat": "^1.8.0"
+    "neat": "^1.8.0",
+    "matchHeight": "^0.7.0"
   }
 }
