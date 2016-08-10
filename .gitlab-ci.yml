@@ -5,7 +5,8 @@ before_script:
 job:
   script:
     - gulp build --staging
-    - rsync -pva --delete-after --exclude 'node_modules' --exclude 'assets/src' --exclude '.*' --exclude '.*/' ./dist/ deployer@demos.pixel2html.com:/home/deployer/www/demos/0002860-0004187/
+    - sed -i "s#/assets/#/0002860/0004187/assets/#g" *.html
+    - rsync -pva --delete-after --exclude 'node_modules' --exclude 'assets/src' --exclude '.*' --exclude '.*/' ./dist/ deployer@demos.pixel2html.com:/home/deployer/www/demos/0002860/0004187/
     - "curl -X POST -F path=0002860/0004187 http://deployer.pixel2html.com/html/demo_links_update"
   only:
       - master
