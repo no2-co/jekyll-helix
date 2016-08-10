@@ -1,7 +1,7 @@
 before_script:
    - bundle install
    - npm-cache install
-   - cd src && bower install
+   - cd src && bower install && cd ..
 job:
   script:
     - gulp build --staging
