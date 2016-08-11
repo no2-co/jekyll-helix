@@ -1,6 +1,6 @@
 // Make the footer accordion situation
 (function($) {
-  var toggle = $('.js-toggle')
+  var toggle = $('.footer-column__title')
 
   toggle.on('click', function(){
     var that = $(this)

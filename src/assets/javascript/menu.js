@@ -5,6 +5,10 @@
 
   view = $(window)
 
+  burger.on('click', function() {
+    body.toggleClass('js-mobile-menu-active')
+  })
+
   view.scroll(function(){
     var menuHeight = menu.outerHeight()
     var scroll = view.scrollTop() - menuHeight

@@ -11,6 +11,12 @@
   }
 }
 
+@mixin is($modifier) {
+  &.is-#{$modifier} {
+    @content
+  }
+}
+
 @mixin js($name) {
   &.js-#{$name} {
     @content
