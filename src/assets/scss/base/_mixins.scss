@@ -43,3 +43,25 @@
     @error "Sadly #{$breakpoint} does not exists 😩 check the variables file.";
   }
  }
+
+
+// Align Mixin without using Flexbox
+// Sometimes is needed
+@mixin align($direction: both) {
+  position: absolute;
+  transform-style: preserve-3d;
+
+  @if index("horizontal" "h", $direction) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @else if index("vertical" "v", $direction) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @else {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+ }
