@@ -43,5 +43,6 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 
 $breakpoints: (
   phablet     : 480px,
-  desktop     : 1024px
-) !default;
+  desktop     : 1024px,
+  4k          : 1440px
+);

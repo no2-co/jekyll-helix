@@ -47,6 +47,7 @@
 
 // Align Mixin without using Flexbox
 // Sometimes is needed
+// Requires parent element to have position relative
 @mixin align($direction: both) {
   position: absolute;
   transform-style: preserve-3d;
