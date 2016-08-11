@@ -19,4 +19,4 @@
   matchHeight.matchHeight()
 
 
-})(jQuery)
+})(jQuery);
