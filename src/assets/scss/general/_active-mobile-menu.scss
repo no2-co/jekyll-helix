@@ -53,8 +53,22 @@
     a {
       display: inline-block;
       margin-right: 25px;
+      position: relative;
+      z-index: 1;
       &:last-child {
         margin-right: 0;
+      }
+      @include is(selected) {
+        &::before {
+          content: '';
+          position: absolute;
+          width: 120%;
+          left: -10%;
+          height: 10px;
+          z-index: -1;
+          bottom: -2px;
+          background: rgba(216,216,216,0.4);
+        }
       }
     }
   }
