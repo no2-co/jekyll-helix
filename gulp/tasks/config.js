@@ -6,6 +6,8 @@ module.exports = {
     './src/bower_components/neat/app/assets/stylesheets'
   ],
   scriptFiles : [
+    './src/bower_components/matchHeight/dist/jquery.matchHeight-min.js',
+    
     './src/assets/javascript/**/*.js'
   ]
 }

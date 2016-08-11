@@ -16,3 +16,8 @@
     @content
   }
 }
+
+@mixin float-cols($cols, $total) {
+  float: left;
+  width: percentage($cols / $total);
+}
