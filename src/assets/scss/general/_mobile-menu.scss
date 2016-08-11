@@ -1,0 +1,82 @@
+@media (max-width: map-get($breakpoints, desktop) ) {
+  .mobile-menu {
+    position: absolute;
+    width: 80%;
+    top: 0;
+    height: 100%;
+    background: $black;
+    color: $white;
+    padding: 13px 15px;
+    transform: translateX(-100%);
+    transition: transform .3s;
+    text-transform: uppercase;
+    a {
+      color: inherit;
+      @include is(selected) {
+        font-weight: bold;
+      }
+    }
+
+    @include e(search) {
+      margin-bottom: 20px;
+      img {
+        width: 24px;
+      }
+    }
+
+    @include e(top-categories) {
+      font-size: 14px;
+      line-height: (16/14);
+      margin-bottom: 38px;
+      a {
+        display: inline-block;
+        margin-right: 25px;
+        position: relative;
+        z-index: 1;
+        &:last-child {
+          margin-right: 0;
+        }
+        @include is(selected) {
+          &::before {
+            content: '';
+            position: absolute;
+            width: 120%;
+            left: -10%;
+            height: 10px;
+            z-index: -1;
+            bottom: -2px;
+            background: rgba(216,216,216,0.4);
+          }
+        }
+      }
+    }
+
+    @include e(second-level) {
+      font-size: 16px;
+      line-height: (17/16);
+      letter-spacing: 0.8px;
+      a {
+        display: block;
+        margin-bottom: 25px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    @include e(footer) {
+      font-size: 12px;
+      line-height: (14/12);
+      padding: 25px 0;
+      position: absolute;
+      bottom: 0;
+      a {
+        display: block;
+        margin-bottom: 15px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
