@@ -10,6 +10,19 @@
   @include e(image) {
     display: block;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @include e(image-hover) {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: transparent;
+    transition: background .3s;
   }
 
   @include e(caption) {
@@ -29,13 +42,23 @@
       line-height: (34/25);
       letter-spacing: 2.27px;
       margin-bottom: 0;
+      z-index: 3;
     }
   }
 
   @include e(href) {
+    display: block;
+    z-index: 4;
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
+  }
+}
+
+
+.single-link:hover {
+  .single-link__image-hover {
+    background: rgba($black, 0.4);
   }
 }
