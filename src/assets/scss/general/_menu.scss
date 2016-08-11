@@ -16,3 +16,13 @@
     align-items: center;
   }
 }
+
+// Active menu
+.main-nav.js-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: fadeInDownBig .8s;
+  z-index: 5;
+}
