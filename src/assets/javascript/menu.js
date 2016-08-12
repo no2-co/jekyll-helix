@@ -21,5 +21,17 @@
     }
   })
 
+  // Trigger search when clicking the loupe
+
+  var searchTrigger = $('.mobile-menu__search img')
+  var mobileMenu = $('.mobile-menu')
+  var searchInput = $('.mobile-menu__search-box input')
+
+  searchTrigger.on('click', function() {
+    mobileMenu.toggleClass('js-search-mode')
+    if (mobileMenu.hasClass('js-search-mode')) {
+      searchInput.focus()
+    }
+  })
 
 })(jQuery);
