@@ -1,6 +1,6 @@
 (function($){
   var burger = $('.main-nav__burger')
-  var menu = $('.main-nav')
+  var menu = $('.site-header')
   var body = $('body')
 
   view = $(window)
