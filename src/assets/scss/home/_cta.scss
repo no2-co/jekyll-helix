@@ -4,14 +4,28 @@
   text-align: center;
   position: relative;
   margin-bottom: 15px;
+  font-size: 18px;
   a {
     display: block;
-    font-size: 18px;
     color: $black;
     line-height: (29/18);
     em {
       font-style: normal;
       font-weight: bold;
+    }
+  }
+}
+
+
+// Desktop
+@include bp(desktop) {
+  .home-cta {
+    padding: 40px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: (22/14);
+    br {
+      display: none;
     }
   }
 }

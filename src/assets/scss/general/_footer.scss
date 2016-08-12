@@ -4,6 +4,7 @@
   font-size: 12px;
   line-height: (22/12);
   padding-bottom: 25px;
+  letter-spacing: 1px;
 }
 
 // Let's style each column
@@ -68,5 +69,47 @@
   border-bottom: none;
   .footer-column__info {
     display: block;
+  }
+}
+
+
+// Desktop view
+
+@include bp(desktop) {
+  .footer-column {
+    border-bottom: none;
+    @include span-columns(3);
+
+    @include e(info) {
+      display: block !important;
+    }
+
+    @include e(title) {
+      h4 {
+        font-size: 14px;
+        line-height: (16/14);
+        letter-spacing: 2px;
+      }
+      .js-toggle {
+        display: none !important;
+      }
+    }
+  }
+}
+
+@include bp(4k) {
+  .footer-column {
+    @include e(social) {
+      text-align: left;
+      flex-wrap: nowrap;
+      a {
+        width: auto;
+        flex-basis: auto;
+        margin-right: 15px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
   }
 }

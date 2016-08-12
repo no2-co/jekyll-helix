@@ -1,17 +1,42 @@
 <header class="site-header">
   <nav class="main-nav">
     <div class="container">
+
+
       <div class="row--flex">
+
+
         <div class="main-nav__burger">
           <img src="/assets/images/burger.svg"/>
         </div>
+
+        <div class="main-nav__left-side">
+          <a href="#">Men</a>
+          <a href="#" class='is-selected'>Women</a>
+          <a href="#">Lifestyle</a>
+          <a href="#">Blog</a>
+          <a href="#">About</a>
+        </div>
+
         <a class="main-nav__logo" href="{{ site.baseurl }}/">
           <img src="/assets/images/logo.svg"/>
         </a>
         <div class="main-nav__cart">
-          <img src="/assets/images/cart-icon.svg"/>
+          <a href="#">
+            <img src="/assets/images/cart-icon.svg"/>
+          </a>
         </div>
+
+        <div class="main-nav__right-side">
+          <a href="#">Account</a>
+          <a href="#" class="main-nav__desktop-cart">Cart <span>(1)</span></a>
+        </div>
+
+
       </div>
+
+
     </div>
   </nav>
+  {% include desktop-menu.html %}
 </header>

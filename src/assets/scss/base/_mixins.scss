@@ -11,6 +11,12 @@
   }
 }
 
+@mixin is($modifier) {
+  &.is-#{$modifier} {
+    @content
+  }
+}
+
 @mixin js($name) {
   &.js-#{$name} {
     @content
@@ -21,3 +27,42 @@
   float: left;
   width: percentage($cols / $total);
 }
+
+
+// Easy breakpoint mixin usually the name would be breakpoint but Neat uses that name
+// for a different purpose <3
+@mixin bp($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+
+  @if $value != null {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+  @else {
+    @error "Sadly #{$breakpoint} does not exists 😩 check the variables file.";
+  }
+ }
+
+
+// Align Mixin without using Flexbox
+// Sometimes is needed
+// Requires parent element to have position relative
+@mixin align($direction: both) {
+  position: absolute;
+  transform-style: preserve-3d;
+
+  @if index("horizontal" "h", $direction) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @else if index("vertical" "v", $direction) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @else {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+ }

@@ -62,3 +62,20 @@
     background: rgba($black, 0.4);
   }
 }
+
+
+// Desktop
+
+@include bp(desktop) {
+  .single-link {
+    @include span-columns(6);
+
+    @include e(caption) {
+      h2 {
+        font-size: 32px;
+        line-height: (36/32);
+        letter-spacing: 4px;
+      }
+    }
+  }
+}

@@ -1,3 +1,7 @@
+.home-collections {
+  @include clearfix;
+}
+
 .single-collection {
   margin-bottom: 15px;
   height: 193px;
@@ -57,6 +61,7 @@
       font-size: 14px;
       line-height: (16/14);
       z-index: 1;
+      transition: color .3s;
       &::before {
         position: absolute;
         content: '';
@@ -78,8 +83,32 @@
     background: rgba($black, 0.4);
   }
   .single-collection__info {
+    a {
+      color: $white;
+    }
     a::before {
-      background: rgba($black, 0.8);
+      background: $black;
+    }
+  }
+}
+
+// Desktop view
+@include bp(desktop) {
+  .single-collection {
+    height: 282px;
+    @include span-columns(4);
+
+    @include e(info) {
+      padding: 25px;
+      h2 {
+        font-size: 14px;
+        line-height: (22/14);
+      }
+      a {
+        font-size: 12px;
+        line-height: (14/12);
+        letter-spacing: 0.86px;
+      }
     }
   }
 }

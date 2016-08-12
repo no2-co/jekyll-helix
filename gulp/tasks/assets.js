@@ -4,6 +4,7 @@ const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const cssnano = require('gulp-cssnano');
+const groupQueries = require('gulp-group-css-media-queries');
 const gulp = require('gulp');
 const gzip = require('gulp-gzip');
 const newer = require('gulp-newer');
@@ -61,6 +62,8 @@ gulp.task('styles', () =>
     .pipe(postcss([
       autoprefixer({browsers: 'last 1 version'})
     ]))
+    // Including this for a non-bloated css with the queries <3
+    .pipe(groupQueries())
     .pipe(size({
       showFiles: true
     }))

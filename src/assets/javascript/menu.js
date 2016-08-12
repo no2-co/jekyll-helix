@@ -1,9 +1,13 @@
 (function($){
   var burger = $('.main-nav__burger')
-  var menu = $('.main-nav')
+  var menu = $('.site-header')
   var body = $('body')
 
   view = $(window)
+
+  burger.on('click', function() {
+    body.toggleClass('js-mobile-menu-active')
+  })
 
   view.scroll(function(){
     var menuHeight = menu.outerHeight()

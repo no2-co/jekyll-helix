@@ -3,15 +3,21 @@
 
 {% include head.html %}
 
-<body>
+<body class="//js-mobile-menu-active">
 
-  {% include header.html %}
+  <div class="everything-mobile-wrapper">
+    <div class="everything-mobile-contents">
 
-  <main class="page-content">
-    {{ content }}
-  </main>
+      {% include header.html %}
+      <main class="page-content">
+        {{ content }}
+        {% include footer.html %}
+      </main>
+    </div>
 
-  {% include footer.html %}
+
+    {% include mobile-menu.html %}
+  </div>
 
   <!-- JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
