@@ -1,3 +1,7 @@
+.mobile-menu {
+  display: none;
+}
+
 @media (max-width: map-get($breakpoints, desktop) ) {
   .mobile-menu {
     position: absolute;
