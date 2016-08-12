@@ -81,7 +81,7 @@
     @include span-columns(3);
 
     @include e(info) {
-      display: block;
+      display: block !important;
     }
 
     @include e(title) {
@@ -91,7 +91,7 @@
         letter-spacing: 2px;
       }
       .js-toggle {
-        display: none;
+        display: none !important;
       }
     }
   }
