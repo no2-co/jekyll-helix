@@ -22,7 +22,6 @@
   })
 
   // Trigger search when clicking the loupe
-
   var searchTrigger = $('.mobile-menu__search img')
   var mobileMenu = $('.mobile-menu')
   var searchInput = $('.mobile-menu__search-box input')
@@ -32,6 +31,15 @@
     if (mobileMenu.hasClass('js-search-mode')) {
       searchInput.focus()
     }
+  })
+
+  // Toggle which category is opened
+  var topCategories = $('.mobile-menu__top-categories a')
+
+  topCategories.on('click', function() {
+    var that = $(this)
+    topCategories.removeClass('is-selected')
+    that.addClass('is-selected')
   })
 
 })(jQuery);

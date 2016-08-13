@@ -1,70 +1,11 @@
-<div class="mobile-menu">
+<div class="mobile-menu js-second-level-active">
+  {% include mobile-search.html %}
 
-  <div class="mobile-menu__search">
-    <img class="mobile-menu__search--white" src="/assets/images/search-icon.png" alt="Search Icon" />
-    <img class="mobile-menu__search--black" src="/assets/images/search-icon-black.png" alt="Search Icon" />
+  <div class="mobile-menu__container">
 
-    <select  class="mobile-menu__select">
-      <option value="">Everything</option>
-      <option value="">Men</option>
-      <option value="">Women</option>
-      <option value="">Lifestyle</option>
-    </select>
+    {% include mobile-menu-top-level.html %}
+
+    {% include mobile-menu-second-level.html %}
 
   </div>
-
-  <div class="mobile-menu__search-box">
-    <input type="text" placeholder="Type To Search">
-
-    <div class="mobile-menu__results">
-      <a href=""><em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category">Clothing</span><span class="mobile-menu__results--amount"> (28)</span></a>
-      <a href="">Bomber <em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category"><em class="mobile-menu__results--match">Jack</em>ets</span><span class="mobile-menu__results--amount"> (71)</span></a>
-      <a href=""><em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category">Clothing</span><span class="mobile-menu__results--amount"> (28)</span></a>
-      <a href="">Bomber <em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category"><em class="mobile-menu__results--match">Jack</em>ets</span><span class="mobile-menu__results--amount"> (71)</span></a>
-      <a href=""><em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category">Clothing</span><span class="mobile-menu__results--amount"> (28)</span></a>
-      <a href="">Bomber <em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category"><em class="mobile-menu__results--match">Jack</em>ets</span><span class="mobile-menu__results--amount"> (71)</span></a>
-      <a href=""><em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category">Clothing</span><span class="mobile-menu__results--amount"> (28)</span></a>
-      <a href="">Bomber <em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category"><em class="mobile-menu__results--match">Jack</em>ets</span><span class="mobile-menu__results--amount"> (71)</span></a>
-      <a href=""><em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category">Clothing</span><span class="mobile-menu__results--amount"> (28)</span></a>
-      <a href="">Bomber <em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category"><em class="mobile-menu__results--match">Jack</em>ets</span><span class="mobile-menu__results--amount"> (71)</span></a>
-      <a href=""><em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category">Clothing</span><span class="mobile-menu__results--amount"> (28)</span></a>
-      <a href="">Bomber <em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category"><em class="mobile-menu__results--match">Jack</em>ets</span><span class="mobile-menu__results--amount"> (71)</span></a>
-      <a href=""><em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category">Clothing</span><span class="mobile-menu__results--amount"> (28)</span></a>
-      <a href="">Bomber <em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category"><em class="mobile-menu__results--match">Jack</em>ets</span><span class="mobile-menu__results--amount"> (71)</span></a>
-      <a href=""><em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category">Clothing</span><span class="mobile-menu__results--amount"> (28)</span></a>
-      <a href="">Bomber <em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category"><em class="mobile-menu__results--match">Jack</em>ets</span><span class="mobile-menu__results--amount"> (71)</span></a>
-      <a href=""><em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category">Clothing</span><span class="mobile-menu__results--amount"> (28)</span></a>
-      <a href="">Bomber <em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category"><em class="mobile-menu__results--match">Jack</em>ets</span><span class="mobile-menu__results--amount"> (71)</span></a>
-      <a href=""><em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category">Clothing</span><span class="mobile-menu__results--amount"> (28)</span></a>
-      <a href="">Bomber <em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category"><em class="mobile-menu__results--match">Jack</em>ets</span><span class="mobile-menu__results--amount"> (71)</span></a>
-      <a href=""><em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category">Clothing</span><span class="mobile-menu__results--amount"> (28)</span></a>
-      <a href="">Bomber <em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category"><em class="mobile-menu__results--match">Jack</em>ets</span><span class="mobile-menu__results--amount"> (71)</span></a>
-      <a href=""><em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category">Clothing</span><span class="mobile-menu__results--amount"> (28)</span></a>
-      <a href="">Bomber <em class="mobile-menu__results--match">Jack</em>ets in <span class="mobile-menu__results--category"><em class="mobile-menu__results--match">Jack</em>ets</span><span class="mobile-menu__results--amount"> (71)</span></a>
-    </div>
-  </div>
-
-  <div class="mobile-menu__top-categories">
-    <a href="#" class="is-selected">Men</a>
-    <a href="#">Women</a>
-    <a href="#">Lifestyle</a>
-  </div>
-
-  <div class="mobile-menu__second-level">
-    <a href="#" class="is-selected">Clothing</a>
-    <a href="#">Shoes</a>
-    <a href="#">Accesories</a>
-    <a href="#">Sale</a>
-    <a href="#">Designers</a>
-  </div>
-
-  <div class="mobile-menu__footer">
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </div>
-
-
-
-
-
 </div>
