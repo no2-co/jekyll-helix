@@ -52,7 +52,7 @@
     }
   }
 
-  @include e(row--flex) {
+  @include e(flex) {
     display: flex;
     align-items: flex-end;
   }
@@ -138,6 +138,10 @@
         margin-bottom: 0;
       }
     }
+  }
+
+  @include e(third-level) {
+    display: none;
   }
 
   @include e(footer) {
