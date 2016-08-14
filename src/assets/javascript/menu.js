@@ -42,4 +42,23 @@
     that.addClass('is-selected')
   })
 
+  // Let's try to work that second level navigation stuff
+  var secondaryLevelFrom = $('.mobile-menu__second-level a')
+  var secondaryLevelTarget = $('.mobile-menu__third-level')
+  var secondaryReturn = $('.mobile-menu__secondary-return')
+
+  secondaryLevelFrom.on('click', function() {
+    var that = $(this)
+    var targetString = that.attr('data-target')
+    var targetDiv = $('.mobile-menu__third-level[data-from="' + targetString + '"]')
+
+    secondaryLevelTarget.removeClass('is-active')
+    targetDiv.addClass('is-active')
+    mobileMenu.addClass('js-second-level-active')
+  })
+
+  secondaryReturn.on('click', function() {
+    mobileMenu.removeClass('js-second-level-active')
+  })
+
 })(jQuery);
