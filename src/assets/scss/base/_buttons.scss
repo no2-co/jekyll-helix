@@ -29,3 +29,31 @@ button {
     opacity: 0.5;
   }
 }
+
+
+// Call to Action / Shop Now
+.cta {
+  position: relative;
+  font-size: 12px;
+  line-height: (14/12);
+  letter-spacing: 0.86px;
+  color: $black;
+  z-index: 1;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 120%;
+    height: 11px;
+    background: rgba(220,220,220, 0.8);
+    bottom: -4px;
+    left: -10%;
+    z-index: -1;
+    transition: background .3s;
+  }
+  &:hover {
+    color: $white;
+    &::before {
+      background: $black;
+    }
+  }
+}
