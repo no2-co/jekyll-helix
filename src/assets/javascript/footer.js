@@ -1,9 +1,10 @@
 // Make the footer accordion situation
 (function($) {
-  var toggle = $('.footer-column__title')
+  var toggle = $('.js-toggle')
 
   toggle.on('click', function(){
     var that = $(this)
+    console.log(that)
     var daddy = that.parents('.footer-column')
     var info = daddy.children('.footer-column__info')
 

@@ -1,3 +1,10 @@
+body {
+  padding-top: 72px;
+  @include bp(desktop) {
+    padding-top: 124px;
+  }
+}
+
 .main-nav{
   padding: 13px 0;
   background: $white;
@@ -36,12 +43,11 @@
 }
 
 // Active menu
-.site-header.js-fixed {
+.site-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  animation: fadeInDownBig .8s;
   z-index: 5;
 }
 
