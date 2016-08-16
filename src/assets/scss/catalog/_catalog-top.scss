@@ -16,10 +16,44 @@
       display: flex;
       align-items: center;
     }
+
+    @include m(right-align) {
+      text-align: right;
+      width: auto;
+      float: right;
+    }
   }
 
-  p {
-    margin-bottom: 0;
+  a {
+    color: inherit;
+    margin-left: 10px;
+    z-index: 1;
+    position: relative;
+    @include is(active) {
+      font-weight: bold;
+      &::before {
+        position: absolute;
+        content: '';
+        width: 120%;
+        height: 8px;
+        background: rgba(220,220,220, 0.8);
+        bottom: -1px;
+        left: -10%;
+        z-index: -1;
+        transition: background .3s;
+      }
+    }
+  }
+
+  @include e(arrow) {
+    width: 8px;
+    img {
+      display: block;
+    }
+  }
+
+  @include e(spacing-span) {
+    margin-left: 10px;
   }
 }
 
