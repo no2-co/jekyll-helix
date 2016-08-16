@@ -7,7 +7,8 @@ module.exports = {
   ],
   scriptFiles : [
     './src/bower_components/matchHeight/dist/jquery.matchHeight-min.js',
-    
-    './src/assets/javascript/**/*.js'
+    './src/assets/javascript/vendor/*.js',
+
+    './src/assets/javascript/*.js'
   ]
 }

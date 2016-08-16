@@ -1,0 +1,38 @@
+.catalog-layout {
+  @include clearfix;
+  position: relative;
+  margin-bottom: 30px;
+  @include bp(desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.catalog-sidebar {
+  height: 20vh;
+  background: $blue;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity;
+  @include is(active) {
+    opacity: 1;
+    pointer-events: all;
+  }
+  @include bp(desktop) {
+    position: static;
+    opacity: 1;
+    pointer-events: all;
+    @include span-columns(2);
+  }
+}
+
+.catalog-products {
+  height: 20vh;
+  background: $dark-gray;
+  @include bp(desktop) {
+    @include span-columns(10);
+  }
+}

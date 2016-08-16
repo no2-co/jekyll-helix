@@ -1,0 +1,30 @@
+.catalog-desktop-top {
+  display: none;
+  margin-bottom: 15px;
+  font-size: 12px;
+  line-height: (14/12);
+  letter-spacing: 1px;
+  @include clearfix;
+
+  @include e(column) {
+    @include span-columns(2);
+    display: flex;
+    align-items: center;
+
+    @include m(large) {
+      @include span-columns(6);
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+@include bp(desktop) {
+  .catalog-desktop-top {
+    display: block;
+  }
+}
