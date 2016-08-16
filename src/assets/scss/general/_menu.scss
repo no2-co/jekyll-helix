@@ -87,6 +87,7 @@ body {
           margin-right: 0;
         }
         @include is(selected) {
+          font-weight: bold;
           &::before {
             content: '';
             position: absolute;
