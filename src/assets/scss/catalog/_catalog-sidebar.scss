@@ -1,3 +1,10 @@
+body.js-catalog-sidebar-active {
+  overflow: hidden;
+  @include bp(desktop){
+    overflow: auto;
+  }
+}
+
 .catalog-sidebar {
   background: $gray;
   position: fixed;
@@ -14,6 +21,10 @@
     z-index: 5;
     opacity: 1;
     pointer-events: all;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 
@@ -31,9 +42,6 @@
     .container {
       width: 100%;
       max-width: 100%;
-    }
-    @include e(top-bar) {
-      display: none;
     }
   }
 }

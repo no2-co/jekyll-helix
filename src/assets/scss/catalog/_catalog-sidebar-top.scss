@@ -14,3 +14,10 @@
     text-align: right;
   }
 }
+
+
+@include bp(desktop) {
+  .catalog-sidebar-top {
+    display: none;
+  }
+}
