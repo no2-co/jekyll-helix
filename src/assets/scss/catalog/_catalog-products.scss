@@ -1,0 +1,14 @@
+.catalog-products {
+  @include clearfix;
+
+  @include e(row) {
+    @include clearfix;
+  }
+}
+
+
+@include bp(desktop) {
+  .catalog-products {
+    @include span-columns(10);
+  }
+}

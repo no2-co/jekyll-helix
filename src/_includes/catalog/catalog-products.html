@@ -1,5 +1,11 @@
 <div class="catalog-products">
-  <h2>Products products products</h2>
-  
-  {% include catalog/catalog-pages.html %}
+  <div class="catalog-products__row">
+    {% include catalog/catalog-products-row.html %}
+    {% include catalog/catalog-products-row.html %}
+    {% include catalog/catalog-products-row.html %}
+    {% include catalog/catalog-products-row.html %}
+  </div>
+  <div class="catalog-products__row">
+    {% include catalog/catalog-pages.html %}
+  </div>
 </div>

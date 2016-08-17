@@ -1,0 +1,28 @@
+.catalog-single-product {
+  position: relative;
+  @include span-columns(6);
+  @include omega(2n);
+  .image-container {
+    position: relative;
+    @include e(normal-img) {
+      display: block;
+      width: 100%;
+    }
+    @include e(hover-img) {
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 100%;
+      opacity: 0;
+      transiton: opacity .3s;
+    }
+  }
+}
+
+@include bp(desktop) {
+  .catalog-single-product {
+    @include omega-reset(2n);
+    @include span-columns(2.5 of 10);
+    @include omega(4n);
+  }
+}
