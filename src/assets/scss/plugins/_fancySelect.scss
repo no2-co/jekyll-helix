@@ -1,6 +1,9 @@
 .fancy-select {
 	position: relative;
-	margin-left: 10px;
+	margin-left: 5px;
+	@include bp(desktop) {
+		margin-left: 10px;
+	}
 }
 
 .fancy-select select:focus + .trigger.open {
@@ -8,13 +11,17 @@
 }
 
 .fancy-select .trigger {
-	padding: 0 8px;
+	padding: 0 4px;
 	cursor: pointer;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	position: relative;
 
 	transition: all 240ms ease-out;
+
+	@include bp(desktop) {
+		padding: 0 8px;
+	}
 }
 
 .fancy-select .trigger:before {
@@ -83,11 +90,15 @@
 }
 
 .fancy-select ul.options li {
-	padding: 8px;
+	padding: 4px;
 	cursor: pointer;
-	white-space: nowrap;
 
 	transition: all 150ms ease-out;
+
+	@include bp(desktop) {
+		padding: 8px;
+		white-space: nowrap;
+	}
 }
 
 .fancy-select ul.options li.hover {
