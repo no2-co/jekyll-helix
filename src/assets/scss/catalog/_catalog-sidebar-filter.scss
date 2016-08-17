@@ -66,7 +66,6 @@
         border: 1px solid $black;
       }
     }
-
     &:checked + label {
       &::after {
         content: '';
@@ -77,7 +76,31 @@
         background: url('../images/check-icon.png') no-repeat center / cover;
       }
     }
+  }
 
-
+  @include e(price) {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    label {
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 1;
+      letter-spacing: 1px;
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+    input {
+      padding: 16px 8px;
+      background: $white;
+      border-bottom: none;
+      margin-bottom: 0;
+      @include placeholder {
+        text-transform: none;
+      }
+    }
   }
 }
