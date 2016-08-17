@@ -1,9 +1,6 @@
 .catalog-sidebar-filter {
   margin-bottom: 15px;
   letter-spacing: 1px;
-  &:last-child {
-    margin-bottom: 0;
-  }
 
   @include e(title) {
     background: $white;
