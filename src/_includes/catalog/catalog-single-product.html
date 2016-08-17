@@ -4,15 +4,15 @@
       <img src="/assets/images/{{ include.image }}" alt="{{ include.title }}" class="image-container__normal-img">
       <img src="/assets/images/cat-hov-1.jpg" alt="{{ include.title }}" class="image-container__hover-img">
       {% if include.label %}
-        <span class="catalog-single-product__label">{{ include.label }}</span>
+        <span class="image-container__label">{{ include.label }}</span>
       {% endif %}
     </div>
   </a>
   <a href="#" title="{{ include.title }}">
     <div class="info">
-      <h2 class="catalog-single-product__brand">{{ include.brand }}</h2>
-      <h3 class="catalog-single-product__title">{{ include.title }}</h3>
-      <p class="catalog-single-product__price">${{ include.price }}</p>
+      <h2 class="info__brand">{{ include.brand }}</h2>
+      <h3 class="info__title">{{ include.title }}</h3>
+      <p class="info__price">${{ include.price }}</p>
     </div>
   </a>
 </div>

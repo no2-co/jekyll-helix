@@ -1,26 +1,78 @@
 .catalog-single-product {
+  color: $black;
   position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   @include span-columns(6);
   @include omega(2n);
+  margin-bottom: 15px;
+  a {
+    color: inherit;
+  }
+
   .image-container {
     position: relative;
+
     @include e(normal-img) {
       display: block;
       width: 100%;
     }
+
     @include e(hover-img) {
       position: absolute;
       top: 0;
       display: block;
       width: 100%;
       opacity: 0;
-      transiton: opacity .3s;
+      transition: opacity .3s;
+      z-index: 2;
+    }
+    @include e(label) {
+      background: $white;
+      color: #9B9B9B;
+      white-space: nowrap;
+      font-style: italic;
+      padding: 5px;
+      @include align(horizontal);
+      bottom: 10px;
+      z-index: 3;
+      font-size: 12px;
+      line-height: (14/12);
+    }
+  }
+
+  .image-container:hover {
+    .image-container__hover-img {
+      opacity: 1;
+    }
+  }
+
+  .info {
+    margin-top: 16px;
+    padding-top: 0 9px;
+    text-align: center;
+    @include e(brand) {
+      font-size: 14px;
+      line-height: (22/14);
+      margin-bottom: 5px;
+    }
+    @include e(title) {
+      font-size: 12px;
+      font-weight: normal;
+      line-height: (14/12);
+      margin-bottom: 10px;
+    }
+    @include e(price) {
+      font-size: 12px;
+      font-weight: normal;
+      line-height: (14/12);
     }
   }
 }
 
 @include bp(desktop) {
   .catalog-single-product {
+    margin-bottom: 50px;
     @include omega-reset(2n);
     @include span-columns(2.5 of 10);
     @include omega(4n);
