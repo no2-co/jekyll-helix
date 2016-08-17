@@ -70,11 +70,21 @@
   }
 }
 
+
 @include bp(desktop) {
   .catalog-single-product {
     margin-bottom: 50px;
     @include omega-reset(2n);
     @include span-columns(2.5 of 10);
     @include omega(4n);
+
+    .image-container {
+      @include e(label) {
+        font-size: 13px;
+        line-height: (15/13);
+        padding: 10px;
+        bottom: 20px;
+      }
+    }
   }
 }
