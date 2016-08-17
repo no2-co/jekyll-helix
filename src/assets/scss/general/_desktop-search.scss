@@ -61,6 +61,10 @@
       display: block;
       margin-bottom: 20px;
     }
+
+    .match {
+      font-weight: bold;
+    }
   }
 
   @include e(column) {

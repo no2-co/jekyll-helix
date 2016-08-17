@@ -1,0 +1,118 @@
+.catalog-sidebar-filter {
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+
+  @include e(title) {
+    background: $white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+
+    h6 {
+      margin-bottom: 0;
+      margin-right: auto;
+      font-size: 12px;
+      line-height: (14/12);
+    }
+    .js-toggle {
+      width: 9px;
+      cursor: pointer;
+    }
+    .js-toggle-less {
+      display: none;
+    }
+  }
+
+  @include e(options) {
+    background: #F9F9F9;
+    padding: 20px;
+    @include clearfix;
+    color: $black;
+    font-size: 12px;
+    line-height: (14/12);
+    letter-spacing: 1px;
+    display: none;
+
+    a {
+      color: inherit;
+      display: block;
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include e(checkbox-container) {
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @include e(checkbox) {
+    display: none;
+
+    & + label {
+      font-size: 12px;
+      font-weight: normal;
+      line-height: (14/12);
+      letter-spacing: 1px;
+      margin-left: 25px;
+      position: relative;
+      &::before {
+        content: '';
+        @include align(vertical);
+        left: -24px;
+        width: 17px;
+        height: 17px;
+        border: 1px solid $black;
+      }
+    }
+    &:checked + label {
+      &::after {
+        content: '';
+        @include align(vertical);
+        left: -20px;
+        width: 9.56px;
+        height: 7.77px;
+        background: url('../images/check-icon.png') no-repeat center / cover;
+      }
+    }
+  }
+
+  @include e(price) {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    label {
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 1;
+      letter-spacing: 1px;
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+    input {
+      padding: 16px 8px;
+      background: $white;
+      border-bottom: none;
+      margin-bottom: 0;
+      @include placeholder {
+        text-transform: none;
+      }
+    }
+  }
+}
+
+
+.catalog-sidebar-filter.is-active {
+  .js-toggle-more {
+    display: none;
+  }
+  .js-toggle-less {
+    display: block;
+  }
+}

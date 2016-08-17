@@ -1,0 +1,23 @@
+.catalog-sidebar-top {
+  font-size: 12px;
+  line-height: (14/12);
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  @include clearfix;
+
+  @include e(left) {
+    @include span-columns(6);
+  }
+  @include e(right) {
+    @include span-columns(6);
+    flex-direction: row;
+    text-align: right;
+  }
+}
+
+
+@include bp(desktop) {
+  .catalog-sidebar-top {
+    display: none;
+  }
+}

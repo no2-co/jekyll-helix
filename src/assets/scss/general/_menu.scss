@@ -1,5 +1,5 @@
 body {
-  padding-top: 72px;
+  padding-top: 65px;
   @include bp(desktop) {
     padding-top: 124px;
   }
@@ -11,6 +11,9 @@ body {
 
   @include e(logo) {
     margin: 0 auto;
+    img {
+      display: block;
+    }
   }
   @include e(burger) {
     cursor: pointer;
@@ -20,6 +23,9 @@ body {
   }
   @include e(cart) {
     cursor: pointer;
+    img {
+      display: block;
+    }
     @include bp(desktop) {
       display: none;
     }
@@ -87,6 +93,7 @@ body {
           margin-right: 0;
         }
         @include is(selected) {
+          font-weight: bold;
           &::before {
             content: '';
             position: absolute;

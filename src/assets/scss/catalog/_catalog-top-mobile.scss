@@ -1,0 +1,27 @@
+.catalog-top-mobile {
+  @include clearfix;
+  margin-bottom: 12px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: (14/12);
+
+  @include e(column) {
+    @include span-columns(6);
+    display: flex;
+    align-items: center;
+
+    @include m(right) {
+      justify-content: flex-end;
+    }
+  }
+
+  @include e(filters-toggle) {
+    cursor: pointer;
+  }
+}
+
+@include bp(desktop) {
+  .catalog-top-mobile {
+    display: none;
+  }
+}
