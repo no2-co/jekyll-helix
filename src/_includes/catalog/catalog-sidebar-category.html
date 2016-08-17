@@ -1,0 +1,45 @@
+<div class="catalog-sidebar-filter">
+  <div class="catalog-sidebar-filter__title">
+    <h6>Category</h6>
+    <img src="/assets/images/plus-icon.svg" alt="A plus icon" class="js-toggle js-toggle-more"/>
+    <img src="/assets/images/minus-icon.svg" alt="A plus icon" class="js-toggle js-toggle-less"/>
+  </div>
+
+  <div class="catalog-sidebar-filter__options">
+    {%
+      include catalog/catalog-sidebar-checkbox.html
+      id="category-1"
+      name="Category"
+    %}
+    {% 
+      include catalog/catalog-sidebar-checkbox.html
+      id="category-2"
+      name="Category"
+    %}
+    {%
+      include catalog/catalog-sidebar-checkbox.html
+      id="category-3"
+      name="Category"
+    %}
+    {%
+      include catalog/catalog-sidebar-checkbox.html
+      id="category-4"
+      name="Category"
+    %}
+    {%
+      include catalog/catalog-sidebar-checkbox.html
+      id="category-5"
+      name="Category"
+    %}
+    {%
+      include catalog/catalog-sidebar-checkbox.html
+      id="category-6"
+      name="Category"
+    %}
+    {%
+      include catalog/catalog-sidebar-checkbox.html
+      id="category-7"
+      name="Category"
+    %}
+  </div>
+</div>
