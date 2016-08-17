@@ -19,6 +19,7 @@
     }
     .js-toggle {
       width: 9px;
+      cursor: pointer;
     }
     .js-toggle-less {
       display: none;
@@ -33,6 +34,7 @@
     font-size: 12px;
     line-height: (14/12);
     letter-spacing: 1px;
+    display: none;
 
     a {
       color: inherit;
@@ -105,5 +107,15 @@
         text-transform: none;
       }
     }
+  }
+}
+
+
+.catalog-sidebar-filter.is-active {
+  .js-toggle-more {
+    display: none;
+  }
+  .js-toggle-less {
+    display: block;
   }
 }
