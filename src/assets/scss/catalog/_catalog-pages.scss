@@ -62,3 +62,35 @@
     }
   }
 }
+
+
+// Desktop situation
+@include bp(desktop) {
+  .catalog-pages {
+    @include e(right) {
+      float: right;
+      width: 50%;
+      justify-content: flex-end;
+      margin-bottom: 0;
+    }
+    @include e(left) {
+      float: left;
+      width: 50%;
+      text-align: left;
+    }
+
+    @include e(scroll-top) {
+      justify-content: flex-start;
+    }
+
+    @include e(arrow) {
+
+      @include m(left) {
+        margin-right: 5px;
+      }
+      @include m(right) {
+        margin-left: 10px !important;
+      }
+    }
+  }
+}
