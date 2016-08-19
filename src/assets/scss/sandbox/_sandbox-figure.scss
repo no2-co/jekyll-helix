@@ -28,16 +28,51 @@
     padding: 30px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    display: flex;
+    align-items: flex-end;
+    @include bp(desktop) {
+      padding: 40px;
+      align-items: center;
+    }
+
+    // Start caption variations
+    @include m(bottom-left) {
+      @extend .sandbox-figure__caption;
+
+      @include bp(desktop) {
+        padding-right: 50%;
+        align-items: flex-end;
+      }
+    }
+
+    @include m(top-left) {
+      @extend .sandbox-figure__caption;
+
+      @include bp(desktop) {
+        padding-right: 50%;
+        align-items: flex-start;
+      }
+    }
+
+    @include m(centered) {
+      @extend .sandbox-figure__caption;
+
+      @include bp(desktop) {
+        text-align: center;
+      }
+    }
+
+    // End caption variations
 
     h1 {
       font-size: 22px;
       line-height: (28/22);
       letter-spacing: 2px;
       margin-bottom: 30px;
-      br {
-        @include bp(desktop) {
-          display: none;
-        }
+      @include bp(desktop) {
+        font-size: 55px;
+        line-height: (62/55);
+        letter-spacing: 5px;
       }
     }
     // h2 is the same in mobile but different on desktop
@@ -46,11 +81,21 @@
       line-height: (28/22);
       letter-spacing: 2px;
       margin-bottom: 15px;
+      @include bp(desktop) {
+        font-size: 14px;
+        line-height: (22/14);
+        margin-bottom: 20px;
+      }
     }
     h3 {
       font-size: 16px;
       line-height: (22/16);
       margin-bottom: 20px;
+      @include bp(desktop) {
+        font-size: 14px;
+        line-height: (22/14);
+        margin-bottom: 10px;
+      }
     }
 
     .cta {

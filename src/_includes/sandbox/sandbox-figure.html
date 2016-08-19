@@ -1,11 +1,44 @@
-<figure class="sandbox-figure">
-  <img src="/assets/images/sand-1.png" alt="">
+<figure
+  class="{% if include.light-theme %}
+  sandbox-figure--white
+  {% else %}
+  sandbox-figure
+  {% endif %}">
 
-  <figcaption class="sandbox-figure__caption">
-    <h1>30% Off <br>Only Today</h1>
-    <h2>Small Headline with 3 lines of text</h2>
-    <h3>New in Bags</h3>
-    <h4>Collection</h4>
-    <a href="#" class="cta">Shop Now</a>
+  <img src="/assets/images/{{ include.image }}">
+
+  <figcaption class="{% if include.figure == 'bottom-left' %}
+  sandbox-figure__caption--bottom-left
+  {% elsif include.figure == 'top-left' %}
+  sandbox-figure__caption--top-left
+  {% elsif include.figure == 'centered' %}
+  sandbox-figure__caption--centered
+
+  {% else %}
+  sandbox-figure__caption
+  {% endif %}">
+    <div class="information">
+      {% if include.h1 %}
+        <h1>{{ include.h1 }}
+          {% if include.h1-second-line %}
+            <br> {{ include.h1-second-line }}
+          {% endif%}
+        </h1>
+      {% endif %}
+
+      {% if include.h2 %}
+        <h2>{{ include.h2 }}</h2>
+      {% endif %}
+
+      {% if include.h3 %}
+        <h3>{{ include.h3 }}</h3>
+      {% endif %}
+
+      {% if include.h4 %}
+        <h4>{{ include.h4 }}</h4>
+      {% endif %}
+
+      <a href="#" class="cta">Shop Now</a>
+    </div>
   </figcaption>
 </figure>
