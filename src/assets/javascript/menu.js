@@ -2,9 +2,14 @@
   var burger = $('.main-nav__burger')
   var menu = $('.site-header')
   var body = $('body')
+  var overlay = $('.page-content__overlay')
 
   burger.on('click', function() {
     body.toggleClass('js-mobile-menu-active')
+  })
+
+  overlay.on('click', function() {
+    body.removeClass('js-mobile-menu-active')
   })
 
   // Trigger search when clicking the loupe

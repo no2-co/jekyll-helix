@@ -11,7 +11,7 @@
 
   .page-content {
     position: relative;
-    &::before {
+    .page-content__overlay {
       content: '';
       position: absolute;
       top: 0;
@@ -38,9 +38,9 @@
     .everything-mobile-contents {
       transform: translateX(80%);
     }
-    .page-content::before {
+    .page-content__overlay {
       background: rgba($black, 0.6);
-      z-index: 2;
+      z-index: 4;
     }
     .mobile-menu {
       display: block;
