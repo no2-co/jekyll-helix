@@ -1,0 +1,183 @@
+.sandbox-figure {
+  margin: 0;
+  margin-bottom: 15px;
+  position: relative;
+  height: 290px;
+  @include bp(desktop) {
+    height: 384px;
+  }
+
+  @include m(white) {
+    @extend .sandbox-figure;
+    color: $white;
+  }
+
+  img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  @include e(caption) {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: flex-end;
+    @include bp(desktop) {
+      padding: 40px;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 22px;
+      line-height: (28/22);
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      @include bp(desktop) {
+        font-size: 55px;
+        line-height: (62/55);
+        letter-spacing: 5px;
+      }
+    }
+    // h2 is the same in mobile but different on desktop
+    h2 {
+      font-size: 22px;
+      line-height: (28/22);
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      @include bp(desktop) {
+        font-size: 14px;
+        line-height: (22/14);
+        margin-bottom: 20px;
+      }
+    }
+    h3 {
+      font-size: 16px;
+      line-height: (22/16);
+      margin-bottom: 20px;
+      @include bp(desktop) {
+        font-size: 14px;
+        line-height: (22/14);
+        margin-bottom: 10px;
+      }
+    }
+
+    .cta {
+      color: inherit;
+    }
+
+    // Start caption variations
+    @include m(bottom-left) {
+      @extend .sandbox-figure__caption;
+
+      @include bp(desktop) {
+        padding-right: 50%;
+        align-items: flex-end;
+      }
+    }
+
+    @include m(top-left) {
+      @extend .sandbox-figure__caption;
+
+      @include bp(desktop) {
+        padding-right: 50%;
+        align-items: flex-start;
+      }
+    }
+
+    @include m(centered) {
+      @extend .sandbox-figure__caption;
+      align-items: center;
+      text-align: center;
+
+      @include bp(desktop) {
+        justify-content: center;
+      }
+    }
+
+    @include m(centered-left) {
+      @extend .sandbox-figure__caption;
+      align-items: center;
+    }
+
+    @include m(promo) {
+      @extend .sandbox-figure__caption;
+
+      @include bp(desktop) {
+        justify-content: center;
+        text-align: center;
+      }
+
+      h1 {
+        margin-bottom: 15px;
+        @include bp(desktop) {
+          margin-bottom: 20px;
+        }
+      }
+      h2 {
+        font-size: 16px;
+        line-height: (22/16);
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        @include bp(desktop) {
+          font-size: 55px;
+          line-height: (62/55);
+          letter-spacing: 5px;
+          margin-bottom: 20px;
+        }
+      }
+      h3 {
+        font-size: 14px;
+        line-height: (22/14);
+        margin-bottom: 25px;
+        @include bp(desktop) {
+          font-size: 14px;
+          line-height: (22/14);
+          margin-bottom: 10px;
+        }
+      }
+    }
+    // End caption variations
+  }
+
+  // JS Things
+  @include e(js-poster) {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    content: '';
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    @include bp(desktop) {
+      background-position: center;
+    }
+    &::before {
+      content: '';
+      top: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 2;
+      transition: background 0.3s;
+      background: transparent;
+    }
+  }
+}
+
+.sandbox-figure:hover {
+  .sandbox-figure__js-poster::before {
+    background: rgba($black, 0.25);
+  }
+}

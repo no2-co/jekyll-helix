@@ -34,9 +34,9 @@ button {
 // Call to Action / Shop Now
 .cta {
   position: relative;
-  font-size: 12px;
-  line-height: (14/12);
-  letter-spacing: 0.86px;
+  font-size: 14px;
+  line-height: (16/14);
+  letter-spacing: 1px;
   color: $black;
   z-index: 1;
   &::before {
