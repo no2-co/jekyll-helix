@@ -1,0 +1,45 @@
+.product-gallery {
+  @include clearfix;
+
+  .gallery-thumbnails {
+    display: none;
+
+    @include e(single) {
+      margin-bottom: 15px;
+      position: relative;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  .slider-main {
+
+    @include e(image) {
+      position: relative;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+// Desktop styles
+@include bp(desktop) {
+  .product-gallery {
+    @include span-columns(6 of 10);
+  }
+
+  .gallery-thumbnails {
+    display: block !important;
+    @include span-columns(1 of 6);
+  }
+
+  .slider-main {
+    @include span-columns(5 of 6);
+  }
+}

@@ -20,4 +20,6 @@ The main SCSS file for everything, yep
 @import "product/index";
 
 // Plugins
-@import "plugins/fancySelect"
+@import "plugins/fancySelect";
+@import "slick.scss";
+@import "plugins/slick-theme.scss";

@@ -1,0 +1,9 @@
+.product-details {
+  @include clearfix;
+}
+
+@include bp(desktop) {
+  .product-details {
+    @include span-columns(4 of 10);
+  }
+}
