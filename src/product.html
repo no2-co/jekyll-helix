@@ -4,9 +4,11 @@ layout: product
 
 <div class="main-home-container">
   <div class="container">
-    {% include catalog/catalog-category.html %}
-    {% include catalog/catalog-top-mobile.html %}
-    {% include catalog/catalog-top.html %}
-    {% include catalog/catalog-normal.html %}
+    {% include product/product-breadcrumbs.html %}
+    <section class="catalog-layout">
+      {% include product/product-sidebar.html %}
+      {% include product/product-main.html %}
+    </section>
+
   </div>
 </div>

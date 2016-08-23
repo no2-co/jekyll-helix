@@ -9,14 +9,14 @@
     <div class="everything-mobile-contents">
 
       {% include header.html %}
-      <main class="page-content">
-        <div class="page-content__overlay"></div>
+      <main class="page-content"><div class="page-content__overlay"></div>
         {{ content }}
         {% include footer.html %}
       </main>
     </div>
 
 
+    {% include product/product-overlay.html %}
     {% include mobile-menu.html %}
   </div>
 
