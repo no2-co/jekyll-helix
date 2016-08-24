@@ -1,6 +1,6 @@
 ;!function($) {
-  var thumbs = $('.product-gallery .gallery-thumbnails__single')
-  var slider = $('.product-gallery .slider-main')
+  var thumbs = $('.gallery-thumbnails__single')
+  var slider = $('.slider-main')
 
   slider.slick({
     arrows : true,
@@ -16,6 +16,12 @@
         }
       }
     ]
-  });
+  })
+
+  thumbs.on('click', function() {
+    var that = $(this)
+    var slide = that.attr('data-slide')
+    slider.slick('slickGoTo', slide)
+  })
 
 }(jQuery);

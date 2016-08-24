@@ -1,9 +1,11 @@
 .product-main {
   @include clearfix;
+
+  padding-bottom: 30px;
 }
 
 @include bp(desktop) {
   .product-main {
-    @include span-columns(10);
+    padding-bottom: 15px;
   }
 }

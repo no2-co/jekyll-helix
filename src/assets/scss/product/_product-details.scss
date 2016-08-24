@@ -4,6 +4,6 @@
 
 @include bp(desktop) {
   .product-details {
-    @include span-columns(4 of 10);
+    @include span-columns(5);
   }
 }
