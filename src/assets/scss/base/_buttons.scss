@@ -51,7 +51,6 @@ button {
     transition: background .3s;
   }
   &:hover {
-    color: $white;
     &::before {
       background: $black;
     }
