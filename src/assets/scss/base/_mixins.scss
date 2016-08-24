@@ -75,3 +75,10 @@
    &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
    &:nth-child(#{$nth}+1) { clear: none }
  }
+
+
+// Quick size
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
