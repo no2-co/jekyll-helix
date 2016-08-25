@@ -1,6 +1,7 @@
 .container {
   width: percentage( 290/320 );
   @include outer-container(1380px);
+  position: relative;
   @include bp(desktop) {
     width: 95%;
   }
