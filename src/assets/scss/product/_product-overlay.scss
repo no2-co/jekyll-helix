@@ -53,6 +53,7 @@
 @include bp(desktop) {
   .product-overlay {
     padding: 30px;
+    width: 85%;
     @include align(both);
 
     @include e(select) {
