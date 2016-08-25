@@ -7,8 +7,8 @@
   var options = $('.product-overlay__select option')
   var deskOptions = $('.product-overlay__desk-options h2')
   var sections = $('.product-overlay__section')
-  var measureImage = $('.product-overlay__image img')
-  var sizesRadios = $('.product-overlay__sizes .option-radio')
+  var measureImages = $('.product-measurements__image img')
+  var sizesRadios = $('.product-measurements__sizes--sizes .option-radio')
   var measureRadios = $('.product-measurements__sizes--measures .option-radio')
   var measureTables = $('.product-measurements__more-info--sizes')
   var triggerButton = $('.product-details__section .cta')
@@ -89,7 +89,19 @@
 
   })
 
+  // Lastly same thing but for the images
+  sizesRadios.on('click', function() {
+    var that = $(this)
+    var attribute = that.attr('data-size-to')
 
+    sizesRadios.removeClass('is-active')
+    that.addClass('is-active')
+
+    measureImages.removeClass('is-active')
+    getTarget(measureImages, attribute, 'data-size-to').addClass('is-active')
+
+
+  })
 
 
 

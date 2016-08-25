@@ -15,7 +15,7 @@
   }
 
   @include e(scrollable) {
-    margin-left: calc(40% - 1px);
+    margin-left: calc(40% - 2px);
     overflow: auto;
 
     td {
@@ -52,7 +52,7 @@
     }
 
     @include e(scrollable) {
-      margin-left: calc(20% - 1px);
+      margin-left: calc(20% - 2px);
     }
   }
 }

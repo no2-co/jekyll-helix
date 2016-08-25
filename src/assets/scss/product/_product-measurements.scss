@@ -4,8 +4,11 @@
   @include e(image) {
     margin-bottom: 25px;
     img {
-      display: block;
+      display: none;
       width: 100%;
+      @include is(active) {
+        display: block;
+      }
     }
   }
 
