@@ -36,6 +36,9 @@
     a {
       color: inherit;
     }
+    .cta {
+      cursor: pointer;
+    }
   }
 
   @include e(select) {

@@ -34,6 +34,11 @@
 
       }
     }
+    &.slick-active {
+      button::before {
+        background: $black;
+      }
+    }
   }
 }
 
