@@ -12,20 +12,20 @@
   var triggerButton = $('.product-details__section .cta')
   var closeButton = $('.product-overlay .close-button')
 
+  // Toggle the modal
   triggerButton.on('click', function() {
     body.addClass('js-product-overlay-active')
-    overlay.addClass('is-active')
     $("html, body").animate({ scrollTop: 0 }, "slow")
   })
 
+  // Close the modal
   function removeOverlay() {
     body.removeClass('js-product-overlay-active')
-    overlay.removeClass('is-active')
   }
-
   background.on('click', removeOverlay)
-
   closeButton.on('click', removeOverlay)
+
+
 
 
 
