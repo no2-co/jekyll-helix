@@ -59,6 +59,14 @@
   }
   @include e(more-info) {
     margin-top: 30px;
+
+    @include m(sizes) {
+      display: none;
+
+      @include is(active) {
+        display: block;
+      }
+    }
   }
 
   @include e(table) {

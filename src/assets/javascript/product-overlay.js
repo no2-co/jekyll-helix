@@ -9,7 +9,8 @@
   var sections = $('.product-overlay__section')
   var measureImage = $('.product-overlay__image img')
   var sizesRadios = $('.product-overlay__sizes .option-radio')
-  var measureRadios = $('.product-overlay__sizes--measures .option-radio')
+  var measureRadios = $('.product-measurements__sizes--measures .option-radio')
+  var measureTables = $('.product-measurements__more-info--sizes')
   var triggerButton = $('.product-details__section .cta')
   var closeButton = $('.product-overlay .close-button')
 
@@ -72,8 +73,22 @@
 
     sections.removeClass('is-active')
     getTarget(sections, attribute).addClass('is-active')
-    
+
   })
+
+  // Change the table from inches to cm on click
+
+  measureRadios.on('click', function() {
+    var that = $(this)
+    var attribute = that.attr('data-unit-to')
+
+    measureRadios.removeClass('is-active')
+    that.addClass('is-active')
+    measureTables.removeClass('is-active')
+    getTarget(measureTables, attribute, 'data-unit-to').addClass('is-active')
+
+  })
+
 
 
 
