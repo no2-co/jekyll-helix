@@ -1,8 +1,8 @@
-<div class="product-overlay //is-active">
+<div class="product-overlay">
   <div class="product-overlay__title">
     <select class="product-overlay__select">
-      <option value="option">Product Measurements</option>
-      <option value="option">Size Conversion Chart</option>
+      <option value="measures">Product Measurements</option>
+      <option value="sizes">Size Conversion Chart</option>
     </select>
 
     <div class="product-overlay__desk-options">
@@ -12,11 +12,11 @@
     </div>
   </div>
 
-  <div class="product-overlay__section">
+  <div class="product-overlay__section product-overlay__section--measurements">
     {% include product/product-measurements.html %}
   </div>
 
-  <div class="product-overlay__section is-active">
+  <div class="product-overlay__section product-overlay__section--sizeguide">
     {% include product/product-sizeguide.html %}
   </div>
 </div>
