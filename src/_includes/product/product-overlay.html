@@ -1,22 +1,22 @@
 <div class="product-overlay">
   <div class="product-overlay__title">
     <select class="product-overlay__select">
-      <option value="measures">Product Measurements</option>
-      <option value="sizes">Size Conversion Chart</option>
+      <option value="measures" data-targets='measures'>Product Measurements</option>
+      <option value="sizes" data-targets='sizes'>Size Conversion Chart</option>
     </select>
 
     <div class="product-overlay__desk-options">
-      <h2 class="is-active">Product Measurements</h2>
-      <h2>Size Conversion Chart</h2>
+      <h2 data-targets='measures'>Product Measurements</h2>
+      <h2 data-targets='sizes'>Size Conversion Chart</h2>
       <span class="close-button"><img src="/assets/images/close-icon.png" alt=""></span>
     </div>
   </div>
 
-  <div class="product-overlay__section product-overlay__section--measurements">
+  <div class="product-overlay__section" data-targets='measures'>
     {% include product/product-measurements.html %}
   </div>
 
-  <div class="product-overlay__section product-overlay__section--sizeguide">
+  <div class="product-overlay__section" data-targets='sizes'>
     {% include product/product-sizeguide.html %}
   </div>
 </div>
