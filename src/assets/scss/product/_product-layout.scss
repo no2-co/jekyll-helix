@@ -1,0 +1,11 @@
+.product-main {
+  @include clearfix;
+
+  padding-bottom: 30px;
+}
+
+@include bp(desktop) {
+  .product-main {
+    padding-bottom: 15px;
+  }
+}

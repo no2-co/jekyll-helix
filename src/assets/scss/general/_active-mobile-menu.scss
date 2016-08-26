@@ -1,3 +1,17 @@
+.page-content {
+  position: relative;
+  .page-content__overlay {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transition: background .3s;
+    z-index: -2;
+  }
+}
+
 // Preparation styles
 @media (max-width: map-get($breakpoints, desktop) ) {
   .everything-mobile-wrapper {
@@ -7,20 +21,6 @@
 
   .everything-mobile-contents {
     transition: transform .3s;
-  }
-
-  .page-content {
-    position: relative;
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: transparent;
-      transition: background .3s;
-      z-index: -2;
-    }
   }
 
 
@@ -38,9 +38,9 @@
     .everything-mobile-contents {
       transform: translateX(80%);
     }
-    .page-content::before {
+    .page-content__overlay {
       background: rgba($black, 0.6);
-      z-index: 2;
+      z-index: 4;
     }
     .mobile-menu {
       display: block;

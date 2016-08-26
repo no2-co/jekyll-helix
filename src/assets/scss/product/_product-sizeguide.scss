@@ -1,0 +1,58 @@
+.product-sizeguide {
+  @include clearfix;
+  overflow: hidden;
+  position: relative;
+
+  @include e(pinned) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+
+    .product-sizeguide__table {
+      width: 100%;
+    }
+  }
+
+  @include e(scrollable) {
+    margin-left: calc(40% - 2px);
+    overflow: auto;
+
+    td {
+      text-align: center;
+      width: 60px;
+      height: 50px;
+    }
+  }
+
+  @include e(table) {
+
+    width: 150%;
+    font-size: 12px;
+    line-height: 1;
+    margin: 0;
+
+    tr:nth-child(2n + 2) {
+      background: #F6F6F6;
+    }
+
+    td {
+      border: 1px solid $black;
+      height: 50px;
+      padding: 0 15px;
+    }
+  }
+}
+
+
+@include bp(desktop) {
+  .product-sizeguide {
+    @include e(pinned) {
+      width: 20%;
+    }
+
+    @include e(scrollable) {
+      margin-left: calc(20% - 2px);
+    }
+  }
+}

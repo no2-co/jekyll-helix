@@ -1,0 +1,147 @@
+.product-details {
+  @include clearfix;
+
+  @include e(section) {
+    margin-bottom: 25px;
+    @include clearfix;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: (14/12);
+
+    @include m(mobile-center) {
+      text-align: center;
+    }
+
+    @include m(half) {
+      @include span-columns(6);
+    }
+
+    h2 {
+      font-size: 14px;
+      line-height: (22/14);
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-size: 12px;
+      line-height: (14/12);
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      color: inherit;
+    }
+    .cta {
+      cursor: pointer;
+    }
+  }
+
+  @include e(select) {
+    width: 100%;
+    height: 37px;
+    appearance: none;
+    border-radius: 0;
+    border: none;
+    font-size: 12px;
+    line-height: (14/12);
+    letter-spacing: 1px;
+    outline: none;
+    padding: 10px 15px;
+    background-color: $white;
+    background-image: url('../images/arrow-down.png');
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: 95% 50%;
+  }
+  @include e(qty) {
+    position: relative;
+
+    @include m(button) {
+      position: absolute;
+      @include align(vertical);
+      @include size(37px);
+      background: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    @include m(minus) {
+      left: 0;
+    }
+
+    @include m(plus) {
+      right: 0;
+    }
+  }
+
+  @include e(input) {
+    appearance: none;
+    width: calc(100% - 76px);
+    margin: 0 auto;
+    height: 37px;
+    background: $white;
+    border: none;
+    font-size: 12px;
+    line-height: (14/12);
+    letter-spacing: 1px;
+    outline: none;
+    padding: 10px 15px;
+    text-align: center;
+  }
+
+  @include e(submit) {
+    background: $black;
+    border-radius: 0;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    text-transform: uppercase;
+    &:hover, &:focus {
+      background: $black;
+    }
+  }
+}
+
+
+
+
+@include bp(desktop) {
+  .product-details {
+    @include span-columns(5);
+
+    @include e(section) {
+      margin-bottom: 40px;
+
+      @include m(mobile-center) {
+        text-align: left;
+      }
+    }
+
+    @include e(qty) {
+      @include m(button) {
+        display: none;
+      }
+    }
+
+    @include e(input) {
+      width: 55px;
+      margin-left: 0;
+    }
+
+    @include e(submit) {
+      padding: 20px;
+      font-size: 16px;
+    }
+  }
+}
