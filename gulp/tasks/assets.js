@@ -95,7 +95,7 @@ function reload(done) {
 // in all your files and update them when needed
 gulp.task('serve', (done) => {
   browserSync.init({
-    open: false,
+    open: true,
     server: ['.tmp', 'dist']
   });
   done();
