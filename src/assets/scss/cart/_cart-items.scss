@@ -134,8 +134,13 @@
       display: flex;
       align-items: center;
 
+      @include m(pic) {
+        @include span-columns(4.5);
+      }
+
       @include m(info) {
         margin-left: 15px;
+        @include span-columns(7.5);
       }
     }
 
