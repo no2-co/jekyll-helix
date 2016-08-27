@@ -1,0 +1,39 @@
+<div class="cart-item">
+  <div class="cart-item__details">
+    <div class="cart-item__details--pic">
+      <img src="/assets/images/{{include.image}}" alt="">
+    </div>
+    <div class="cart-item__details--info">
+      <h2>{{include.brand}}</h2>
+      <p>{{include.title}}</p>
+      <p>${{include.price}}</p>
+    </div>
+  </div>
+  <div class="cart-item__adjustments">
+
+    <div class="cart-item__adjustments--third cart-item__adjustments--push-right">
+      <button class="cart-item__adjustments--remove">Remove</button>
+    </div>
+
+    <div class="cart-item__adjustments--third">
+      <h6>Size</h6>
+      <select class="cart-item__adjustments--select">
+        <option value="">XS</option>
+        <option value="">S</option>
+        <option value="" selected>M</option>
+        <option value="">L</option>
+        <option value="">XL</option>
+      </select>
+    </div>
+
+    <div class="cart-item__adjustments--third">
+      <h6>Qty</h6>
+      <div class="cart-item__adjustments--qty">
+        <span class="cart-item__adjustments--button cart-item__adjustments--minus"><img src="/assets/images/minus-icon.svg"></span>
+        <input type="num" class="cart-item__adjustments--input" value="1">
+        <span class="cart-item__adjustments--button cart-item__adjustments--plus"><img src="/assets/images/plus-icon.svg"></span>
+      </div>
+    </div>
+
+  </div>
+</div>
