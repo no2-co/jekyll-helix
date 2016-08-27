@@ -8,13 +8,13 @@
   h6 {
     font-size: 12px;
     line-height: (14/12);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   p {
     font-size: 12px;
-    line-height: (14/12);
-    margin-bottom: 20px;
+    line-height: (22/12);
+    margin-bottom: 10px;
     &:last-child {
       margin-bottom: 0;
     }
@@ -27,10 +27,6 @@
       font-style: normal;
       font-weight: bold;
     }
-  }
-
-  @include e(large-paragraph) {
-    line-height: (22/12) !important;
   }
 
   @include e(calcs) {
@@ -71,7 +67,7 @@
   }
 
   @include e(title) {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     h6, img {
       display: inline-block;
       margin-bottom: 0;
