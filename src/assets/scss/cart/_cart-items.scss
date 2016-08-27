@@ -146,6 +146,10 @@
         float: right;
       }
 
+      @include m(select) {
+        background-position: 90% 50%;
+      }
+
       @include m(button) {
         display: none;
       }
