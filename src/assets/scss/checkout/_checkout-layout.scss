@@ -1,0 +1,17 @@
+.checkout-layout {
+  @include clearfix;
+}
+
+
+@include bp(desktop) {
+  .checkout-customer {
+    background: orange;
+    @include span-columns(7);
+    @include shift(1);
+  }
+
+  .checkout-summary {
+    background: pink;
+    @include span-columns(4);
+  }
+}
