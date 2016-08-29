@@ -1,0 +1,16 @@
+.checkout-customer {
+
+  .checkout-form {
+    @include e(row) {
+      @include clearfix;
+      
+      @include m(push-down) {
+        margin-bottom: 70px;
+      }
+    }
+
+    @include e(link) {
+      text-decoration: underline;
+    }
+  }
+}

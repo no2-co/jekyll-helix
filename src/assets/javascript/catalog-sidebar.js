@@ -9,7 +9,7 @@
   })
 
   // Make accordion stuff
-  var toggle = $('.catalog-sidebar-filter .js-toggle')
+  var toggle = $('.catalog-sidebar-filter__title')
   toggle.on('click', function() {
     var that = $(this)
     var daddy = that.parents('.catalog-sidebar-filter')
