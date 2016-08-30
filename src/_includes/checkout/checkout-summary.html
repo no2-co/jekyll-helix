@@ -1,7 +1,24 @@
 <div class="checkout-summary">
-  <h4>Order Summary</h4>
-  {% include checkout/checkout-single-item.html %}
-  {% include checkout/checkout-single-item.html %}
+
+  <div class="checkout-summary__main">
+    <h4>Order Summary</h4>
+    {%
+      include checkout/checkout-single-item.html
+      brand="Sold Out Frvr"
+      title="Smiley Flannel Shirt"
+      price="240"
+      image="prod-3.jpg"
+    %}
+
+    {%
+      include checkout/checkout-single-item.html
+      brand="Homme Plissé"
+      title="Striped Trouser"
+      price="859.50"
+      image="cat-4.jpg"
+    %}
+  </div>
+
 
 
   <div class="cart-summary cart-summary--black">
