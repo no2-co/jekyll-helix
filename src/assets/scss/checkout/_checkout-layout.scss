@@ -1,5 +1,9 @@
 .checkout-layout {
   @include clearfix;
+  margin-bottom: 25px;
+  @include bp(desktop) {
+    margin-bottom: 40px;
+  }
 }
 
 
