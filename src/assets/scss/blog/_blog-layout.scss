@@ -7,6 +7,10 @@
 }
 
 @include bp(desktop) {
+  .blog-layout {
+    margin-top: 40px;
+  }
+
   .blog-posts {
     @include span-columns(6);
     @include shift(1);

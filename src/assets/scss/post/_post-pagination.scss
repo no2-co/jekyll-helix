@@ -1,4 +1,4 @@
-.blog-pagination {
+.post-pagination {
   @include clearfix;
   font-size: 12px;
   line-height: (14/12);
@@ -11,46 +11,26 @@
   }
   @include e(right) {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
   @include e(arrow) {
-    width: 8px;
+    display: flex;
+    align-items: center;
     img {
-      display: block;
+      width: 8px;
     }
-    @include m(left) {
-      margin-right: 30px;
-    }
-    @include m(right) {
-      margin-left: 30px !important;
+    span {
+      text-transform: uppercase;
+      margin: 0 10px;
     }
   }
 
-  @include e(spacing-span) {
-    margin-left: 10px;
-  }
   a {
     color: inherit;
     margin-left: 10px;
-    z-index: 1;
-    position: relative;
-    @include is(active) {
-      font-weight: bold;
-      &::before {
-        position: absolute;
-        content: '';
-        width: 120%;
-        height: 8px;
-        background: rgba(220,220,220, 0.8);
-        bottom: -1px;
-        left: -10%;
-        z-index: -1;
-        transition: background .3s;
-      }
-    }
   }
 
   @include e(scroll-top) {
@@ -68,7 +48,7 @@
 
 // Desktop situation
 @include bp(desktop) {
-  .blog-pagination {
+  .post-pagination {
     @include e(right) {
       float: right;
       width: 50%;

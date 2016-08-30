@@ -36,3 +36,10 @@
   }
 
 }
+
+
+@include bp(desktop) {
+  .blog-post {
+    margin-bottom: 22px;
+  }
+}
