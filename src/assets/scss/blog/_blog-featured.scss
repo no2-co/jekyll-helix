@@ -1,0 +1,40 @@
+.blog-featured {
+  @include clearfix;
+  margin-bottom: 22px;
+  display: block;
+  color: $black;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  &:hover, &:focus {
+    color: $black;
+  }
+
+  @include e(image) {
+    float: left;
+    width: 144px;
+  }
+
+  @include e(details) {
+    background: $white;
+    float: left;
+    width: calc(100% - 144px);
+    height: 144px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+      font-size: 14px;
+      line-height: (22/14);
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: (22/12);
+      margin-bottom: 5px;
+    }
+
+  }
+}
