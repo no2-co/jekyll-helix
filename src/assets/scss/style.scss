@@ -20,6 +20,8 @@ The main SCSS file for everything, yep
 @import "product/index";
 @import "cart/index";
 @import "checkout/index";
+@import "blog/index";
+@import "post/index";
 
 // Plugins
 @import "plugins/fancySelect";
