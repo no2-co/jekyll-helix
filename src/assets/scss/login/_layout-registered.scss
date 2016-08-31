@@ -5,6 +5,7 @@
   text-transform: uppercase;
   margin-bottom: 15px;
   @include bp(desktop) {
+    padding: 30px;
     margin-bottom: 40px;
   }
 
