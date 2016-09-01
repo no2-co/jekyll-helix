@@ -9,6 +9,7 @@ module.exports = {
   scriptFiles : [
     './src/bower_components/matchHeight/dist/jquery.matchHeight-min.js',
     './src/bower_components/slick-carousel/slick/slick.min.js',
+    './src/bower_components/sticky-kit/jquery.sticky-kit.min.js',
     './src/assets/javascript/vendor/*.js',
 
     './src/assets/javascript/*.js'
