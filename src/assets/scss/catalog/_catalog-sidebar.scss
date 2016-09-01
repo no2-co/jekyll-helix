@@ -1,10 +1,3 @@
-body.js-catalog-sidebar-active {
-  overflow: hidden;
-  @include bp(desktop){
-    overflow: auto;
-  }
-}
-
 .catalog-sidebar {
   background: $gray;
   position: fixed;
@@ -38,6 +31,8 @@ body.js-catalog-sidebar-active {
     top: initial;
     left: initial;
     height: auto;
+    z-index: 2;
+    background: none;
     // We need a container on mobile but not on desktop here
     .container {
       width: 100%;

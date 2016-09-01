@@ -15,12 +15,14 @@
     var daddy = that.parents('.catalog-sidebar-filter')
     var info = daddy.children('.catalog-sidebar-filter__options')
 
-    if ( daddy.hasClass('js-is-active') ){
+    if ( daddy.hasClass('is-active') ){
       info.slideUp()
-      daddy.removeClass('js-is-active')
+      daddy.removeClass('is-active')
+      $(document.body).trigger("sticky_kit:recalc")
     } else {
       info.slideDown()
-      daddy.addClass('js-is-active')
+      daddy.addClass('is-active')
+      $(document.body).trigger("sticky_kit:recalc")
     }
 
 
