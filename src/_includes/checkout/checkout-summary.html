@@ -1,0 +1,36 @@
+<div class="checkout-summary">
+
+  <div class="checkout-summary__main">
+    <h4>Order Summary</h4>
+    {%
+      include checkout/checkout-single-item.html
+      brand="Sold Out Frvr"
+      title="Smiley Flannel Shirt"
+      price="240"
+      image="prod-3.jpg"
+    %}
+
+    {%
+      include checkout/checkout-single-item.html
+      brand="Homme Plissé"
+      title="Striped Trouser"
+      price="859.50"
+      image="cat-4.jpg"
+    %}
+  </div>
+
+
+
+  <div class="cart-summary cart-summary--black">
+    <div class="cart-summary__calcs">
+      <p><span>Subtotal:</span><span class="right">$640</span></p>
+      <p><span>Shipping:</span><span class="right">FREE</span></p>
+      <p><span>Taxes:</span><span class="right">$0.00</span></p>
+    </div>
+
+    <div class="cart-summary__total">
+      <p><em>Total</em><em class="right">$1,099.50</em></p>
+    </div>
+  </div>
+
+</div>

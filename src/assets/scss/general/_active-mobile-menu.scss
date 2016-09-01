@@ -1,5 +1,8 @@
 .page-content {
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   .page-content__overlay {
     content: '';
     position: absolute;

@@ -5,6 +5,11 @@
   text-transform: uppercase;
   margin-bottom: 15px;
 
+  @include m(black) {
+    background: $black;
+    color: $white;
+  }
+
   h6 {
     font-size: 12px;
     line-height: (14/12);
@@ -34,7 +39,7 @@
   }
 
   @include e(total) {
-    border-top: 1px solid $black;
+    border-top: 1px solid;
     padding-top: 20px;
   }
 
