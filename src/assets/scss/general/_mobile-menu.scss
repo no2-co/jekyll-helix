@@ -66,6 +66,7 @@
     background-repeat: no-repeat;
     background-size: 12px;
     background-position: 100% 40%;
+    display: none;
   }
 
   @include e(search-box) {
@@ -130,6 +131,10 @@
     }
   }
 
+  @include e(text) {
+    color: $white;
+  }
+
   @include e(footer) {
     font-size: 12px;
     line-height: (14/12);
@@ -165,6 +170,14 @@
   }
 
   .mobile-menu__container {
+    display: none;
+  }
+
+  .mobile-menu__select {
+    display: block;
+  }
+
+  .mobile-menu__text {
     display: none;
   }
 }
