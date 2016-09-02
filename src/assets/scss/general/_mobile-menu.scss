@@ -70,6 +70,7 @@
   }
 
   @include e(search-box) {
+    margin-top: 15px;
     input {
       font-size: 16px;
       letter-spacing: 1.33px;
