@@ -1,0 +1,13 @@
+.account-layout {
+  @include clearfix;
+}
+
+@include bp(desktop) {
+  .account-history {
+    @include span-columns(5);
+    @include shift(1);
+  }
+  .account-details {
+    @include span-columns(5);
+  }
+}

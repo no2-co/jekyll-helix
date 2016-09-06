@@ -25,15 +25,22 @@
     flex-direction: column;
 
     h2 {
-      font-size: 14px;
+      font-size: 10px;
       line-height: (22/14);
       margin-bottom: 5px;
+
+      @include bp(4k) {
+        font-size: 14px;
+      }
     }
 
     p {
-      font-size: 12px;
+      font-size: 10px;
       line-height: (22/12);
       margin-bottom: 5px;
+      @include bp(4k) {
+        font-size: 12px;
+      }
     }
 
   }

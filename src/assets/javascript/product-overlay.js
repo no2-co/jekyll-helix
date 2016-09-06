@@ -29,13 +29,13 @@
     $("html, body").animate({ scrollTop: 0 }, "slow")
 
     sections.removeClass('is-active')
-    getTarget(sections, 'sizes').addClass('is-active')
+    getTarget(sections, 'measures').addClass('is-active')
 
     deskOptions.removeClass('is-active')
-    getTarget(deskOptions, 'sizes').addClass('is-active')
+    getTarget(deskOptions, 'measures').addClass('is-active')
 
     options.removeAttr('selected')
-    getTarget(options, 'sizes').attr('selected', 'true')
+    getTarget(options, 'measures').attr('selected', 'true')
   })
 
   // Close the modal

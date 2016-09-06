@@ -18,6 +18,7 @@
   .blog-featured-posts {
     display: block;
     @include span-columns(4);
+    margin-bottom: 45px;
 
     @include e(title) {
       border-bottom: 1px solid $black;
