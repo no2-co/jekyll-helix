@@ -12,7 +12,7 @@
     sidebar.stick_in_parent({
       offset_top : offset,
       recalc_every : 1,
-      parent: '.page-content'
+      parent: '.main-home-container'
     })
   }
 
