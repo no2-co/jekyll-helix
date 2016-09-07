@@ -40,7 +40,7 @@
     @include span-columns(6);
 
     @include e(image) {
-      height: 750px;
+      max-height: 900px;
     }
   }
 }

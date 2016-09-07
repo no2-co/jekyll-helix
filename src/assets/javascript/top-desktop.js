@@ -1,4 +1,4 @@
 ;(function($){
-  var select = $('.catalog-desktop-top__fancy-select')
+  var select = $('.js-fancy-select')
   select.fancySelect()
 })(jQuery);
