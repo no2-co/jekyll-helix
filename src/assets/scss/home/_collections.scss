@@ -82,14 +82,6 @@
   .single-collection__image--link {
     background: rgba($black, 0.4);
   }
-  .single-collection__info {
-    a {
-      color: $white;
-    }
-    a::before {
-      background: $black;
-    }
-  }
 }
 
 // Desktop view
