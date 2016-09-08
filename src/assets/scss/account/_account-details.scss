@@ -31,10 +31,15 @@
     }
   }
 
+  @include e(textarea) {
+    resize: vertical;
+  }
+
   @include e(third) {
     font-size: 12px;
     line-height: (14/12);
     margin-bottom: 20px;
+    border: none;
     &:last-child {
       margin-bottom: 0;
     }
