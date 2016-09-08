@@ -3,9 +3,6 @@
     <div class="image-container">
       <img src="/assets/images/{{ include.image }}" alt="{{ include.title }}" class="image-container__normal-img">
       <img src="/assets/images/product-4.jpg" alt="{{ include.title }}" class="image-container__hover-img">
-      {% if include.label %}
-        <span class="image-container__label">{{ include.label }}</span>
-      {% endif %}
     </div>
   </a>
   <a href="#" title="{{ include.title }}">
@@ -13,6 +10,9 @@
       <h2 class="info__brand">{{ include.brand }}</h2>
       <h3 class="info__title">{{ include.title }}</h3>
       <p class="info__price">${{ include.price }}</p>
+      {% if include.label %}
+        <span class="image-container__label">{{ include.label }}</span>
+      {% endif %}
     </div>
   </a>
 </div>

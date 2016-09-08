@@ -5,7 +5,7 @@
   letter-spacing: 1px;
   @include span-columns(6);
   @include omega(2n);
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   a {
     color: inherit;
   }
@@ -33,10 +33,10 @@
       white-space: nowrap;
       font-style: italic;
       padding: 5px;
-      @include align(horizontal);
-      bottom: 10px;
+      // @include align(horizontal);
+      // bottom: 10px;
       z-index: 3;
-      font-size: 12px;
+      font-size: 10px;
       line-height: (14/12);
     }
   }
@@ -73,17 +73,17 @@
 
 @include bp(desktop) {
   .catalog-single-product {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     @include omega-reset(2n);
     @include span-columns(2.5 of 10);
     @include omega(4n);
 
     .image-container {
       @include e(label) {
-        font-size: 13px;
+        font-size: 10px;
         line-height: (15/13);
-        padding: 10px;
-        bottom: 20px;
+        padding: 8px;
+        // bottom: 20px;
       }
     }
   }
