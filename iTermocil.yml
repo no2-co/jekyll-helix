@@ -1,0 +1,10 @@
+windows:
+  - name : odd
+    root : ~/Documents/Git/odd
+    layout : tiled
+    panes :
+      - commands:
+        - npm run gulp
+      - commands:
+        - atom .
+        focus : true
