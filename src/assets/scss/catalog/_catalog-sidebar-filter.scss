@@ -32,7 +32,8 @@
     line-height: (14/12);
     letter-spacing: 1px;
     display: none;
-
+    max-height: 170px;
+    overflow-y: auto;
     a {
       color: inherit;
       display: block;
