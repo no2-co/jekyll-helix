@@ -7,8 +7,8 @@
     "name": "Half Helix",
     "email": "hello@halfhelix.com"
   },
-  "scripts" : {
-    "gulp" : "gulp"
+  "scripts": {
+    "gulp": "gulp"
   },
   "devDependencies": {
     "autoprefixer": "^6.2.3",
@@ -34,8 +34,12 @@
     "gulp-size": "^2.0.0",
     "gulp-sourcemaps": "^1.3.0",
     "gulp-uglify": "^1.5.1",
+    "node-bourbon": "^4.2.8",
     "require-dir": "^0.3.0",
     "shelljs": "^0.7.0",
     "yargs": "^4.7.0"
+  },
+  "dependencies": {
+    "bourbon-neat": "^1.8.0"
   }
 }

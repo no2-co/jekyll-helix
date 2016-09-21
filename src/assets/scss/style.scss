@@ -4,28 +4,9 @@ The main SCSS file for everything, yep
 
 @import "vendor/normalize";
 
-// Importing bourbon and neat (using sassIncludes on the gulpfile for a clean import here)
+// Importing libraries (using sassIncludes on the gulp config for a clean import here)
 @import "bourbon";
 @import "neat";
 
+// Base
 @import "base/base";
-@import "global";
-@import "layout/index";
-
-// Now here will go the modules
-@import "general/index";
-@import "home/index";
-@import 'catalog/index';
-@import "sandbox/index";
-@import "product/index";
-@import "cart/index";
-@import "checkout/index";
-@import "blog/index";
-@import "post/index";
-@import "login/index";
-@import "account/index";
-
-// Plugins
-@import "plugins/fancySelect";
-@import "slick.scss";
-@import "plugins/slick-custom";

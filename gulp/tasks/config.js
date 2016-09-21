@@ -2,8 +2,8 @@
 
 module.exports = {
   sassIncludes : [
-    './src/bower_components/bourbon/app/assets/stylesheets',
-    './src/bower_components/neat/app/assets/stylesheets'
+    './node_modules/bourbon/app/assets/stylesheets',
+    './node_modules/bourbon-neat/app/assets/stylesheets'
   ],
   scriptFiles : [
     './src/assets/javascript/vendor/*.js',
