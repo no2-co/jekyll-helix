@@ -16,3 +16,19 @@ The main SCSS file for everything, yep
 
 // Modules
 @import "modules/modules";
+
+// Delete Me
+body {
+  background-color: $blue;
+  .delete-me {
+    @include outer-container();
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3.5em;
+    color: $white;
+  }
+}

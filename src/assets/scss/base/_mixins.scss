@@ -28,23 +28,6 @@
   width: percentage($cols / $total);
 }
 
-
-// Easy breakpoint mixin usually the name would be breakpoint but Neat uses that name
-// for a different purpose <3
-@mixin bp($breakpoint) {
-  $value: map-get($breakpoints, $breakpoint);
-
-  @if $value != null {
-    @media (min-width: $value) {
-      @content;
-    }
-  }
-  @else {
-    @error "Sadly #{$breakpoint} does not exists 😩 check the variables file.";
-  }
- }
-
-
 // Align Mixin without using Flexbox
 // Sometimes is needed
 // Requires parent element to have position relative
@@ -68,17 +51,10 @@
  }
 
  // Omega Reset
- // Because Neat is stupid haha
+ // This mixin assumes you are designing mobile-first using min-width media queries.
  // http://www.joshfry.me/blog/2013/05/13/omega-reset-for-bourbon-neat
 
  @mixin omega-reset($nth) {
    &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
    &:nth-child(#{$nth}+1) { clear: none }
  }
-
-
-// Quick size
-@mixin size($width, $height: $width) {
-  width: $width;
-  height: $height;
-}
