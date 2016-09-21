@@ -2,11 +2,17 @@
 The main SCSS file for everything, yep
 */
 
+// Vendor
 @import "vendor/normalize";
-
-// Importing libraries (using sassIncludes on the gulp config for a clean import here)
+// Importing libraries gulp/tasks/config.js
 @import "bourbon";
 @import "neat";
 
 // Base
 @import "base/base";
+
+// Layouts
+@import "layouts/layouts";
+
+// Modules
+@import "modules/modules";

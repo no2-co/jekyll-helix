@@ -1,9 +1,0 @@
-.catalog-layout {
-  @include clearfix;
-  position: relative;
-  margin-bottom: 30px;
-  padding-top: 15px;
-  @include bp(desktop) {
-    margin-bottom: 50px;
-  }
-}
