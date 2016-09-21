@@ -1,6 +1,6 @@
-# odd
+# Project name
 
-> shopify thing
+> project discription
 
 ## To get started
 

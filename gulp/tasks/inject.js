@@ -2,7 +2,7 @@
 const gulp = require('gulp');
 const inject = require('gulp-inject');
 
-const jsInjects = ['.tmp/src/_layouts/default.html', '.tmp/src/_layouts/product.html']
+const jsInjects = ['.tmp/src/_layouts/default.html']
 
 // 'gulp inject:head' -- injects our style.css file into the head of our HTML
 gulp.task('inject:head', () =>
